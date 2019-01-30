@@ -7,19 +7,20 @@ f = open('keySet.data','r')
 
 access_key, secret_access_key = f.read().split("\n")
 
-session = boto3.session(
+session = boto3.Session(
     aws_access_key_id = access_key,
     aws_secret_access_key = secret_access_key,
 )
+teamName = 'UxfactoryTestTeam_1'
+#subnet = MyEc2.create_subnet(session)
+#print(subnet)
+#MyEc2.create_keypair(session, teamName)
+#MyEc2.create_instance(session, teamName, 2)
+MyEc2.delete_keypair(session, teamName)
 
-try:
-    ec2 = session.resource('ec2', region_name='REGION')
-    subnet = ec2.Subnet('SUBNET')
-    instances = subnet.create_instances(ImageId='IMAGE_ID', InstanceType='INSTANCE_TYPE',
-                                        MaxCount='NO_OF_INSTANCE',
-                                        MinCount='NO_OF_INSTANCE',
-                                        KeyName='KEY_PAIR_NAME', SecurityGroups=[], SecurityGroupIds=['SECURITY_GROUP'])
-    print(instances)
+MyKey = MyEc2.create_keypair(session, teamName)
 
-except BaseException as exe:
-    print(exe)
+test_file = open('key_data.txt', 'w')
+
+print (MyKey)
+#test_file.write(MyKey)
