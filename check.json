@@ -1,0 +1,126 @@
+{
+  'Reservations': [
+    {
+      'Groups': [],
+      'Instances': [
+        {
+          'AmiLaunchIndex': 0,
+          'ImageId': 'ami-0c8e4039a99df4618',
+          'InstanceId': 'i-0f34ec20c82b9939a',
+          'InstanceType': 't3.medium',
+          'KeyName': 'Uxfac',
+          'LaunchTime': datetime.datetime(2019,
+          1,
+          31,
+          6,
+          53,
+          31,
+          tzinfo=tzutc()),
+          'Monitoring': {
+            'State': 'disabled'
+          },
+          'Placement': {
+            'AvailabilityZone': 'ap-northeast-2c',
+            'GroupName': '',
+            'Tenancy': 'default'
+          },
+          'PrivateDnsName': 'ip-172-31-34-164.ap-northeast-2.compute.internal',
+          'PrivateIpAddress': '172.31.34.164',
+          'ProductCodes': [],
+          'PublicDnsName': '',
+          'State': {
+            'Code': 0,
+            'Name': 'pending'
+          },
+          'StateTransitionReason': '',
+          'SubnetId': 'subnet-0c655fced82b51192',
+          'VpcId': 'vpc-ba14f6d1',
+          'Architecture': 'x86_64',
+          'BlockDeviceMappings': [],
+          'ClientToken': '',
+          'EbsOptimized': False,
+          'EnaSupport': True,
+          'Hypervisor': 'xen',
+          'NetworkInterfaces': [
+            {
+              'Attachment': {
+                'AttachTime': datetime.datetime(2019,
+                1,
+                31,
+                6,
+                53,
+                31,
+                tzinfo=tzutc()),
+                'AttachmentId': 'eni-attach-0be64759d69bf4053',
+                'DeleteOnTermination': True,
+                'DeviceIndex': 0,
+                'Status': 'attaching'
+              },
+              'Description': '',
+              'Groups': [
+                {
+                  'GroupName': 'uxfac_group',
+                  'GroupId': 'sg-0e07d7fcc9bd8ce0e'
+                }
+              ],
+              'Ipv6Addresses': [],
+              'MacAddress': '0a:09:1a:7b:91:92',
+              'NetworkInterfaceId': 'eni-02fc90952ddb48524',
+              'OwnerId': '198312547190',
+              'PrivateDnsName': 'ip-172-31-34-164.ap-northeast-2.compute.internal',
+              'PrivateIpAddress': '172.31.34.164',
+              'PrivateIpAddresses': [
+                {
+                  'Primary': True,
+                  'PrivateDnsName': 'ip-172-31-34-164.ap-northeast-2.compute.internal',
+                  'PrivateIpAddress': '172.31.34.164'
+                }
+              ],
+              'SourceDestCheck': True,
+              'Status': 'in-use',
+              'SubnetId': 'subnet-0c655fced82b51192',
+              'VpcId': 'vpc-ba14f6d1'
+            }
+          ],
+          'RootDeviceName': '/dev/sda1',
+          'RootDeviceType': 'ebs',
+          'SecurityGroups': [
+            {
+              'GroupName': 'uxfac_group',
+              'GroupId': 'sg-0e07d7fcc9bd8ce0e'
+            }
+          ],
+          'SourceDestCheck': True,
+          'Tags': [
+            {
+              'Key': 'Name',
+              'Value': 'Uxfac player-cpu'
+            }
+          ],
+          'VirtualizationType': 'hvm',
+          'CpuOptions': {
+            'CoreCount': 1,
+            'ThreadsPerCore': 2
+          },
+          'HibernationOptions': {
+            'Configured': False
+          }
+        }
+      ],
+      'OwnerId': '198312547190',
+      'ReservationId': 'r-0526dfe98d3f129ae'
+    }
+  ],
+  'ResponseMetadata': {
+    'RequestId': 'caee7b43-de2d-4089-9862-4b72e87bbd26',
+    'HTTPStatusCode': 200,
+    'HTTPHeaders': {
+      'content-type': 'text/xml;charset=UTF-8',
+      'transfer-encoding': 'chunked',
+      'vary': 'Accept-Encoding',
+      'date': 'Thu, 31 Jan 2019 06:53:31 GMT',
+      'server': 'AmazonEC2'
+    },
+    'RetryAttempts': 0
+  }
+}

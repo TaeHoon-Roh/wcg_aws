@@ -13,9 +13,6 @@ session = boto3.Session(
     aws_access_key_id = access_key,
     aws_secret_access_key = secret_access_key,
 )
-teamName = 'UxfactoryTestTeam_1'
+teamName = 'blue'
 
-db = MyDb.connectDB()
-
-#MyDb.insertTeamInfo(db, teamName)
-MyDb.insertTest(db, teamName)
+MyEc2.create_team(session, teamName)
